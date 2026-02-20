@@ -1,0 +1,185 @@
+/* Color Palette Variables */
+:root {
+    --primary-dark: #0f2a4a;   
+    --accent-gold: #c6a254;    
+    --text-grey: #6c757d;      
+    --bg-color: #f5f7fa;       /* Light grayish blue background for contrast */
+    --card-bg: #ffffff;
+    --input-border: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-grey);
+}
+
+/* Header & Typography */
+.logo-circle {
+    width: 48px;
+    height: 48px;
+    background-color: var(--primary-dark);
+    border-radius: 50%;
+    color: var(--accent-gold);
+    font-size: 1.4rem;
+}
+
+.main-title {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: var(--text-grey);
+}
+
+/* Navigation Links */
+.custom-nav {
+    gap: 1.5rem;
+    padding-bottom: 0px;
+}
+
+.custom-nav .nav-link {
+    color: #9ca3af; /* Lighter grey for inactive tabs */
+    font-weight: 500;
+    padding: 0.5rem 0.2rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.custom-nav .nav-link:hover {
+    color: var(--primary-dark);
+}
+
+/* Active State matching screenshot (Gold text & underline) */
+.custom-nav .nav-link.active {
+    color: var(--accent-gold);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.nav-divider {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* Form Card Styling */
+.form-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.form-title {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.form-subtitle {
+    font-size: 0.85rem;
+    color: #8fa0b3;
+}
+
+/* Inputs Styling */
+.custom-input {
+    height: 52px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    color: var(--primary-dark);
+    font-size: 0.95rem;
+    padding: 0 16px;
+    box-shadow: none !important;
+    transition: border-color 0.3s ease;
+}
+
+.custom-input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.custom-input:focus {
+    border-color: var(--accent-gold);
+    outline: none;
+}
+
+/* Generate Button */
+.btn-generate {
+    background: linear-gradient(90deg, #cda75a 0%, #a4813a 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    height: 55px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(198, 162, 84, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-generate:hover {
+    background: linear-gradient(90deg, #dfb96c 0%, #b8954e 100%);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(198, 162, 84, 0.4);
+}
+
+.form-divider {
+    border-top: 1px solid #f1f5f9;
+    opacity: 1;
+}
+
+/* Security Notice inside form */
+.lock-icon {
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+}
+
+.secure-text {
+    color: #8fa0b3;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.privacy-link {
+    color: #8fa0b3;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: var(--primary-dark);
+}
+
+/* Dark Footer Styling (Same as before) */
+.dark-footer {
+    background-color: var(--primary-dark);
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+.award-icon {
+    color: var(--accent-gold);
+    font-size: 1.6rem;
+}
+
+.copyright-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #9ab0c7;
+}
+
+.disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    max-width: 800px;
+    color: #667c92;
+}

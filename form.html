@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Details - Golden Tribute</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+    <div class="container py-5">
+        <header class="text-center mb-4">
+            <div class="logo-circle mx-auto mb-3 d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-staff-snake"></i>
+            </div>
+            <h1 class="main-title">Golden Tribute to Our Esteemed Doctors</h1>
+            <p class="subtitle">Thank you for your invaluable contribution to healthcare and humanity.</p>
+        </header>
+
+        <nav class="mb-5 position-relative">
+            <ul class="nav justify-content-center custom-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Landing</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Doctor Details</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Certificate</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
+            </ul>
+            <hr class="nav-divider">
+        </nav>
+
+        <main class="row justify-content-center">
+            <div class="col-lg-7 col-md-9">
+                <div class="form-card p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <h2 class="form-title">Enter Your Details to Generate Certificate</h2>
+                        <p class="form-subtitle">Please provide accurate information for your official recognition.</p>
+                    </div>
+
+                    <form id="certificateForm" novalidate>
+                        <div class="mb-3">
+                            <input type="text" class="form-control custom-input" id="doctorName" placeholder="Doctor Name*" required>
+                            <div class="invalid-feedback">Please enter the doctor's name.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="tel" class="form-control custom-input" id="mobileNumber" placeholder="Mobile Number* (10 digits)" pattern="[0-9]{10}" required>
+                            <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email" class="form-control custom-input" id="emailId" placeholder="Email ID*" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control custom-input" id="city" placeholder="City*" required>
+                            <div class="invalid-feedback">Please enter your city.</div>
+                        </div>
+
+                        <div class="mb-4 pb-2">
+                            <input type="text" class="form-control custom-input" id="hospital" placeholder="Hospital / Specialization (Optional)">
+                        </div>
+
+                        <button type="submit" class="btn btn-generate w-100 mb-4" id="generateBtn">
+                            Generate My Certificate
+                        </button>
+                        
+                        <hr class="form-divider mb-4">
+
+                        <div class="security-info text-center mb-3">
+                            <i class="fa-solid fa-lock lock-icon me-2"></i>
+                            <span class="secure-text">Your information is secure and will not be shared.</span>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="#" class="privacy-link">PRIVACY POLICY</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="dark-footer text-center">
+        <div class="container">
+            <i class="fa-solid fa-award award-icon mb-3"></i>
+            <p class="copyright-text mb-3">&copy; 2024 Medical Excellence Awards. All Rights Reserved.</p>
+            <p class="disclaimer-text mx-auto mb-0">
+                This digital recognition platform is dedicated to honoring the tireless efforts of healthcare<br class="d-none d-md-block">
+                professionals worldwide. Data collected is used exclusively for certificate generation and<br class="d-none d-md-block">
+                professional recognition.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
