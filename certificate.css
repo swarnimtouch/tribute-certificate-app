@@ -1,7 +1,7 @@
 /* Color Palette Variables */
 :root {
-    --primary-dark: #0f2a4a;   
-    --accent-gold: #c6a254;    
+    --primary-dark: #173e8a;   /* Intas Dark Blue */
+    --accent-gold: #2b6cd4;    /* Intas Bright Blue (Kept variable name same to avoid HTML breaks) */
     --text-grey: #6c757d;      
     --bg-color: #f8fafc;       /* Very light background */
     --success-light: #e6f7eb;  /* Light green circle background */
@@ -21,7 +21,7 @@ body {
     height: 48px;
     background-color: var(--primary-dark);
     border-radius: 50%;
-    color: var(--accent-gold);
+    color: var(--bg-color);
     font-size: 1.4rem;
 }
 
@@ -96,7 +96,7 @@ body {
 .email-notice span {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #c6a254; /* Gold text */
+    color: #2b6cd4; /* Changed from Gold to Blue */
 }
 
 /* Certificate Image Container */
@@ -134,16 +134,16 @@ body {
     font-weight: 700;
 }
 
-/* Download PDF Button (Gold Gradient) */
+/* Download PDF Button (Blue Gradient) */
 .btn-pdf {
-    background: linear-gradient(90deg, #cda75a 0%, #a4813a 100%);
+    background: linear-gradient(90deg, #4fa1ff 0%, #2b6cd4 100%);
     color: #ffffff;
-    box-shadow: 0 10px 20px rgba(198, 162, 84, 0.25);
+    box-shadow: 0 10px 20px rgba(43, 108, 212, 0.25);
 }
 
 .btn-pdf:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(198, 162, 84, 0.4);
+    box-shadow: 0 12px 25px rgba(43, 108, 212, 0.4);
 }
 
 /* Download JPG Button (White) */
@@ -158,7 +158,7 @@ body {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* WhatsApp Button (Green) */
+/* WhatsApp Button (Green - Kept as is for brand recognition) */
 .btn-whatsapp {
     background-color: var(--whatsapp-green);
     color: #ffffff;
@@ -192,21 +192,21 @@ body {
 }
 
 .award-icon {
-    color: var(--accent-gold);
+    color: var(--bg-color);
     font-size: 1.6rem;
 }
 
 .copyright-text {
     font-weight: 600;
     font-size: 0.95rem;
-    color: #9ab0c7;
+    color: var(--bg-color);
 }
 
 .disclaimer-text {
     font-size: 0.85rem;
     line-height: 1.8;
     max-width: 800px;
-    color: #667c92;
+    color: var(--bg-color);
 }
 
 /* Mobile Responsiveness for Action Buttons */

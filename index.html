@@ -39,14 +39,16 @@
         <main class="row justify-content-center">
             <div class="col-lg-10 col-xl-9">
                 <div class="video-container position-relative">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200&auto=format&fit=crop" alt="Hospital Room" class="video-img w-100">
-                    
-                    <div class="overlay d-flex flex-column justify-content-center align-items-center">
-                        <button class="play-btn shadow-sm mb-3" id="playBtn">
-                            <i class="fa-solid fa-play"></i>
-                        </button>
-                        <h6 class="play-text m-0">PLAY TRIBUTE VIDEO</h6>
-                    </div>
+                        <video id="tributeVideo" class="video-element w-100" poster="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200&auto=format&fit=crop">
+                            <source src="assets/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>                    
+                    <div class="overlay">
+            <button class="play-btn shadow-sm mb-3" id="playBtn">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <h6 class="play-text m-0">PLAY TRIBUTE VIDEO</h6>
+          </div>
                 </div>
 
                 <div class="footer-info text-center mt-4">
@@ -59,7 +61,8 @@
 
     <section class="bottom-action text-center py-5">
         <div class="container">
-            <button class="btn proceed-btn mb-4" id="proceedBtn">
+            <button class="btn proceed-btn mb-4" 
+                onclick="window.location.href='form.html'">
                 Proceed to Receive Your Digital Certificate
             </button>
 
@@ -83,7 +86,7 @@
         <div class="container">
             <i class="fa-solid fa-award award-icon mb-3"></i>
             
-            <p class="copyright-text mb-3">&copy; 2024 Medical Excellence Awards. All Rights Reserved.</p>
+            <p class="copyright-text mb-3">&copy; 2026 Medical Excellence Awards. All Rights Reserved.</p>
             
             <p class="disclaimer-text mx-auto mb-0">
                 This digital recognition platform is dedicated to honoring the tireless efforts of healthcare<br class="d-none d-md-block">

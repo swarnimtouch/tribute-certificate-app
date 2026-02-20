@@ -13,12 +13,20 @@ $(document).ready(function() {
 
     // Play button interaction
     $('#playBtn').on('click', function() {
-        // Quick visual click effect
-        $(this).fadeOut(100).fadeIn(100);
+        var video = $('#tributeVideo').get(0); // Video element ko select kiya
+        var overlay = $('.overlay'); // Overlay container ko select kiya
         
-        // You can replace this alert with actual logic (e.g., opening a YouTube iframe modal)
-        console.log("Play Tribute Video clicked!");
-        alert("Video modal will open here.");
+        // 1. Video ko play karna
+        video.play();
+        
+        // 2. Video tag me "controls" add karna taki pause/play kar sakein
+        $('#tributeVideo').attr('controls', 'controls');
+        
+        // 3. Video element me 'playing' class add karna (taki CSS filter hat jaye aur video clear dikhe)
+        $('#tributeVideo').addClass('playing');
+        
+        // 4. Overlay (Play button aur text) ko hide karna
+        overlay.fadeOut(400); 
     });
 
     // Proceed Button Interaction

@@ -1,10 +1,10 @@
 /* Color Palette Variables based on the screenshot */
 :root {
-    --primary-dark: #0f2a4a;   /* Logo background and heading color */
-    --accent-gold: #c6a254;    /* Active links, play button, icons */
+    --primary-dark: #173e8a;   /* Intas Dark Blue - Logo background and heading color */
+    --accent-gold: #2b6cd4;    /* Intas Bright Blue - Active links, play button, icons */
     --text-grey: #6c757d;      /* Subtitles and paragraph text */
     --bg-color: #ffffff;
-    --border-dark: #2a1f18;    /* Dark brown border of video frame */
+    --border-dark: #0a1b3f;    /* Very Dark blue border of video frame */
 }
 
 body {
@@ -19,7 +19,7 @@ body {
     height: 48px;
     background-color: var(--primary-dark);
     border-radius: 50%;
-    color: var(--accent-gold);
+    color: var(--bg-color);
     font-size: 1.4rem;
 }
 
@@ -72,23 +72,35 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.video-img {
+/* Class ka naam video-img se badal kar video-element kiya */
+.video-element {
     display: block;
     aspect-ratio: 16/9;
     object-fit: cover;
     opacity: 0.8;
-    /* Adding a warm sepia-like filter to match the screenshot's lighting */
     filter: sepia(0.5) hue-rotate(-15deg) saturate(1.5) brightness(0.9);
+    transition: all 0.5s ease; /* Smooth transition ke liye */
+}
+
+/* Nayi class add karni hai jab video play ho */
+.video-element.playing {
+    opacity: 1;
+    filter: none; /* Play hone par sepia filter hata dega taki colors original dikhein */
 }
 
 /* Overlay & Play Button */
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+    /* YAHAN SE NAYI LINES ADD KI HAIN CENTERING KE LIYE */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .play-btn {
@@ -109,7 +121,7 @@ body {
 
 .play-btn:hover {
     transform: scale(1.1);
-    background-color: #d1b168;
+    background-color: #1e56bc; /* Thoda darker blue hover ke liye */
 }
 
 .play-text {
@@ -136,22 +148,22 @@ body {
 }
 
 .proceed-btn {
-    /* Gradient matching the screenshot */
-    background: linear-gradient(90deg, #dfcb9f 0%, #c1a05e 100%);
+    /* Gradient matching the Blue theme */
+    background: linear-gradient(90deg, #4fa1ff 0%, #2b6cd4 100%);
     color: #ffffff;
     font-weight: 700;
     font-size: 1.15rem;
     padding: 16px 45px;
     border-radius: 50px;
     border: none;
-    box-shadow: 0 8px 20px rgba(193, 160, 94, 0.25);
+    box-shadow: 0 8px 20px rgba(43, 108, 212, 0.25);
     transition: all 0.3s ease;
     letter-spacing: 0.3px;
 }
 
 .proceed-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(193, 160, 94, 0.4);
+    box-shadow: 0 12px 25px rgba(43, 108, 212, 0.4);
     color: #ffffff;
 }
 
@@ -193,19 +205,19 @@ body {
 }
 
 .award-icon {
-    color: var(--accent-gold);
+    color: var(--bg-color);
     font-size: 1.6rem;
 }
 
 .copyright-text {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.95rem;
-    color: #9ab0c7; /* Lighter bluish-grey for contrast */
+    color: var(--bg-color); /* Lighter bluish-grey for contrast */
 }
 
 .disclaimer-text {
     font-size: 0.85rem;
     line-height: 1.8;
     max-width: 800px;
-    color: #667c92; /* Darker bluish-grey */
+    color: var(--bg-color); /* Darker bluish-grey */
 }

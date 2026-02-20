@@ -1,7 +1,7 @@
 /* Color Palette Variables */
 :root {
-    --primary-dark: #0f2a4a;   
-    --accent-gold: #c6a254;    
+    --primary-dark: #173e8a;   /* Intas Dark Blue */
+    --accent-gold: #2b6cd4;    /* Intas Bright Blue (Kept variable name same to avoid HTML breaks) */
     --text-grey: #6c757d;      
     --bg-color: #f5f7fa;       /* Light grayish blue background for contrast */
     --card-bg: #ffffff;
@@ -20,7 +20,7 @@ body {
     height: 48px;
     background-color: var(--primary-dark);
     border-radius: 50%;
-    color: var(--accent-gold);
+    color: var(--bg-color);
     font-size: 1.4rem;
 }
 
@@ -55,7 +55,7 @@ body {
     color: var(--primary-dark);
 }
 
-/* Active State matching screenshot (Gold text & underline) */
+/* Active State matching Blue theme */
 .custom-nav .nav-link.active {
     color: var(--accent-gold);
     border-bottom: 2px solid var(--accent-gold);
@@ -111,22 +111,24 @@ body {
 
 /* Generate Button */
 .btn-generate {
-    background: linear-gradient(90deg, #cda75a 0%, #a4813a 100%);
+    /* Gradient matching the Blue theme */
+    background: linear-gradient(90deg, #4fa1ff 0%, #2b6cd4 100%);
     color: #ffffff;
     font-weight: 700;
     font-size: 1.1rem;
     height: 55px;
     border-radius: 8px;
     border: none;
-    box-shadow: 0 4px 15px rgba(198, 162, 84, 0.3);
+    box-shadow: 0 4px 15px rgba(43, 108, 212, 0.3);
     transition: all 0.3s ease;
 }
 
 .btn-generate:hover {
-    background: linear-gradient(90deg, #dfb96c 0%, #b8954e 100%);
+    /* Lighter blue gradient for hover */
+    background: linear-gradient(90deg, #6bb3ff 0%, #3a7be5 100%);
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(198, 162, 84, 0.4);
+    box-shadow: 0 6px 20px rgba(43, 108, 212, 0.4);
 }
 
 .form-divider {
@@ -167,19 +169,19 @@ body {
 }
 
 .award-icon {
-    color: var(--accent-gold);
+    color: var(--bg-color);
     font-size: 1.6rem;
 }
 
 .copyright-text {
     font-weight: 600;
     font-size: 0.95rem;
-    color: #9ab0c7;
+    color: var(--bg-color);
 }
 
 .disclaimer-text {
     font-size: 0.85rem;
     line-height: 1.8;
     max-width: 800px;
-    color: #667c92;
+    color: var(--bg-color);
 }

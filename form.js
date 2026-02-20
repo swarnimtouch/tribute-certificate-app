@@ -24,13 +24,8 @@ $(document).ready(function() {
 
         // Dummy process simulation (e.g., API call delay)
         setTimeout(function() {
-            alert("Success! Details submitted. In a real MERN app, this would post to your backend.");
-            $btn.html(originalText);
-            $btn.prop('disabled', false);
-            
-            // Form reset
-            $('#certificateForm')[0].reset();
-            $('#certificateForm').removeClass('was-validated');
+            // alert aur form reset ko hata kar, redirect ka code add kiya hai
+            window.location.href = "certificate.html";
         }, 1500);
     });
 
