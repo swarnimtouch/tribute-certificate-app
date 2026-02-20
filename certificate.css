@@ -158,17 +158,17 @@ body {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* WhatsApp Button (Green - Kept as is for brand recognition) */
-.btn-whatsapp {
-    background-color: var(--whatsapp-green);
+/* Home Button (Primary Dark Blue Theme) */
+.btn-home {
+    background-color: var(--primary-dark);
     color: #ffffff;
-    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.25);
+    box-shadow: 0 10px 20px rgba(23, 62, 138, 0.25);
 }
 
-.btn-whatsapp:hover {
+.btn-home:hover {
     transform: translateY(-3px);
-    background-color: #1ebd5a;
-    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+    background-color: #0f2a60; /* Hover par thoda darker shade */
+    box-shadow: 0 12px 25px rgba(23, 62, 138, 0.4);
 }
 
 /* Privacy Link Bottom */
