@@ -1,7 +1,8 @@
 /* Color Palette Variables */
 :root {
-    --primary-dark: #173e8a;   /* Intas Dark Blue */
-    --accent-gold: #2b6cd4;    /* Intas Bright Blue (Kept variable name same to avoid HTML breaks) */
+    --primary-dark: #1b4f9b;   /* Updated Primary Dark Blue */
+    --accent-gold: #ea5e20;    /* Updated to Orange (Kept variable name same to avoid HTML breaks) */
+    --secondary-blue: #006cb5; /* Added Bright Blue for gradients and highlights */
     --text-grey: #6c757d;      
     --bg-color: #f8fafc;       /* Very light background */
     --success-light: #e6f7eb;  /* Light green circle background */
@@ -15,13 +16,19 @@ body {
     color: var(--text-grey);
 }
 
+.top-left-logo {
+    width: 140px; /* Aap apni image ke hisaab se isko kam ya zyada kar sakte hain */
+    height: auto;
+    object-fit: contain;
+}
+
 /* Header & Typography */
 .logo-circle {
     width: 48px;
     height: 48px;
     background-color: var(--primary-dark);
     border-radius: 50%;
-    color: var(--bg-color);
+    color: #ffffff; /* Explicitly set to white for contrast */
     font-size: 1.4rem;
 }
 
@@ -57,7 +64,7 @@ body {
 }
 
 .custom-nav .nav-link.active {
-    color: var(--accent-gold);
+    color: var(--accent-gold); /* Now reflects Orange */
     border-bottom: 2px solid var(--accent-gold);
 }
 
@@ -90,13 +97,13 @@ body {
 }
 
 .email-icon {
-    color: var(--accent-gold);
+    color: var(--accent-gold); /* Now reflects Orange */
 }
 
 .email-notice span {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #2b6cd4; /* Changed from Gold to Blue */
+    color: var(--secondary-blue); /* Updated from hardcoded blue to theme blue */
 }
 
 /* Certificate Image Container */
@@ -134,22 +141,22 @@ body {
     font-weight: 700;
 }
 
-/* Download PDF Button (Blue Gradient) */
+/* Download PDF Button (New Blue Gradient) */
 .btn-pdf {
-    background: linear-gradient(90deg, #4fa1ff 0%, #2b6cd4 100%);
+    background: linear-gradient(90deg, var(--secondary-blue) 0%, var(--primary-dark) 100%);
     color: #ffffff;
-    box-shadow: 0 10px 20px rgba(43, 108, 212, 0.25);
+    box-shadow: 0 10px 20px rgba(0, 108, 181, 0.25);
 }
 
 .btn-pdf:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(43, 108, 212, 0.4);
+    box-shadow: 0 12px 25px rgba(0, 108, 181, 0.4);
 }
 
 /* Download JPG Button (White) */
 .btn-jpg {
     background-color: #ffffff;
-    color: var(--accent-gold);
+    color: var(--accent-gold); /* Icon text will be Orange */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -162,13 +169,13 @@ body {
 .btn-home {
     background-color: var(--primary-dark);
     color: #ffffff;
-    box-shadow: 0 10px 20px rgba(23, 62, 138, 0.25);
+    box-shadow: 0 10px 20px rgba(27, 79, 155, 0.25); /* Adjusted shadow to match new dark blue */
 }
 
 .btn-home:hover {
     transform: translateY(-3px);
-    background-color: #0f2a60; /* Hover par thoda darker shade */
-    box-shadow: 0 12px 25px rgba(23, 62, 138, 0.4);
+    background-color: #12366b; /* Adjusted hover dark shade for #1b4f9b */
+    box-shadow: 0 12px 25px rgba(27, 79, 155, 0.4);
 }
 
 /* Privacy Link Bottom */
@@ -192,21 +199,21 @@ body {
 }
 
 .award-icon {
-    color: var(--bg-color);
+    color: #ffffff;
     font-size: 1.6rem;
 }
 
 .copyright-text {
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--bg-color);
+    color: #ffffff;
 }
 
 .disclaimer-text {
     font-size: 0.85rem;
     line-height: 1.8;
     max-width: 800px;
-    color: var(--bg-color);
+    color: #e2e8f0; /* Soft grey for readability on dark footer */
 }
 
 /* Mobile Responsiveness for Action Buttons */

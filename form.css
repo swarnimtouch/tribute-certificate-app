@@ -1,7 +1,8 @@
 /* Color Palette Variables */
 :root {
-    --primary-dark: #173e8a;   /* Intas Dark Blue */
-    --accent-gold: #2b6cd4;    /* Intas Bright Blue (Kept variable name same to avoid HTML breaks) */
+    --primary-dark: #1b4f9b;   /* Updated Primary Blue */
+    --accent-gold: #ea5e20;    /* Updated to Orange (Kept variable name same to avoid HTML breaks) */
+    --secondary-blue: #006cb5; /* Added Bright Blue for gradients/focus */
     --text-grey: #6c757d;      
     --bg-color: #f5f7fa;       /* Light grayish blue background for contrast */
     --card-bg: #ffffff;
@@ -14,13 +15,19 @@ body {
     color: var(--text-grey);
 }
 
+.top-left-logo {
+    width: 140px; /* Aap apni image ke hisaab se isko kam ya zyada kar sakte hain */
+    height: auto;
+    object-fit: contain;
+}
+
 /* Header & Typography */
 .logo-circle {
     width: 48px;
     height: 48px;
     background-color: var(--primary-dark);
     border-radius: 50%;
-    color: var(--bg-color);
+    color: #ffffff; /* Changed to solid white for better contrast */
     font-size: 1.4rem;
 }
 
@@ -55,9 +62,9 @@ body {
     color: var(--primary-dark);
 }
 
-/* Active State matching Blue theme */
+/* Active State matching New theme */
 .custom-nav .nav-link.active {
-    color: var(--accent-gold);
+    color: var(--accent-gold); /* Now reflects the Orange color */
     border-bottom: 2px solid var(--accent-gold);
 }
 
@@ -105,30 +112,30 @@ body {
 }
 
 .custom-input:focus {
-    border-color: var(--accent-gold);
+    border-color: var(--secondary-blue); /* Professional bright blue focus instead of orange */
     outline: none;
 }
 
 /* Generate Button */
 .btn-generate {
-    /* Gradient matching the Blue theme */
-    background: linear-gradient(90deg, #4fa1ff 0%, #2b6cd4 100%);
+    /* Gradient matching the New Blue theme */
+    background: linear-gradient(90deg, var(--secondary-blue) 0%, var(--primary-dark) 100%);
     color: #ffffff;
     font-weight: 700;
     font-size: 1.1rem;
     height: 55px;
     border-radius: 8px;
     border: none;
-    box-shadow: 0 4px 15px rgba(43, 108, 212, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 108, 181, 0.3);
     transition: all 0.3s ease;
 }
 
 .btn-generate:hover {
-    /* Lighter blue gradient for hover */
-    background: linear-gradient(90deg, #6bb3ff 0%, #3a7be5 100%);
+    /* Adjusted lighter gradient for hover state */
+    background: linear-gradient(90deg, #1a85d6 0%, #2561b3 100%);
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(43, 108, 212, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 108, 181, 0.4);
 }
 
 .form-divider {
@@ -138,7 +145,7 @@ body {
 
 /* Security Notice inside form */
 .lock-icon {
-    color: var(--accent-gold);
+    color: var(--accent-gold); /* Now reflects the Orange color */
     font-size: 0.9rem;
 }
 
@@ -161,7 +168,7 @@ body {
     color: var(--primary-dark);
 }
 
-/* Dark Footer Styling (Same as before) */
+/* Dark Footer Styling */
 .dark-footer {
     background-color: var(--primary-dark);
     padding: 60px 0;
@@ -169,19 +176,19 @@ body {
 }
 
 .award-icon {
-    color: var(--bg-color);
+    color: #ffffff;
     font-size: 1.6rem;
 }
 
 .copyright-text {
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--bg-color);
+    color: #ffffff;
 }
 
 .disclaimer-text {
     font-size: 0.85rem;
     line-height: 1.8;
     max-width: 800px;
-    color: var(--bg-color);
+    color: #e2e8f0; /* Lighter text for readability on dark background */
 }

@@ -1,10 +1,11 @@
-/* Color Palette Variables based on the screenshot */
+/* Color Palette Variables based on the new color scheme */
 :root {
-    --primary-dark: #173e8a;   /* Intas Dark Blue - Logo background and heading color */
-    --accent-gold: #2b6cd4;    /* Intas Bright Blue - Active links, play button, icons */
+    --primary-blue: #1b4f9b;   /* Main Dark Blue - Logo background, heading, footer */
+    --secondary-blue: #006cb5; /* Bright Blue - Hovers and gradients */
+    --accent-orange: #ea5e20;  /* Vibrant Orange - Active links, play button, icons */
     --text-grey: #6c757d;      /* Subtitles and paragraph text */
     --bg-color: #ffffff;
-    --border-dark: #0a1b3f;    /* Very Dark blue border of video frame */
+    --border-dark: #1b4f9b;    /* Border of video frame matching primary blue */
 }
 
 body {
@@ -13,11 +14,17 @@ body {
     color: var(--text-grey);
 }
 
+.top-left-logo {
+    width: 140px; /* Aap apni image ke hisaab se isko kam ya zyada kar sakte hain */
+    height: auto;
+    object-fit: contain;
+}
+
 /* Header & Typography */
 .logo-circle {
     width: 48px;
     height: 48px;
-    background-color: var(--primary-dark);
+    background-color: var(--primary-blue);
     border-radius: 50%;
     color: var(--bg-color);
     font-size: 1.4rem;
@@ -26,7 +33,7 @@ body {
 .main-title {
     font-family: "Playfair Display", serif;
     font-weight: 600;
-    color: var(--primary-dark);
+    color: var(--primary-blue);
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
 }
@@ -47,14 +54,17 @@ body {
     font-weight: 500;
     padding: 0.5rem 0;
     transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
 }
 
 .custom-nav .nav-link:hover {
-    color: var(--primary-dark);
+    color: var(--secondary-blue);
 }
 
+/* Active State matching New theme */
 .custom-nav .nav-link.active {
-    color: var(--accent-gold);
+    color: var(--accent-orange); /* Now reflects the Orange color */
+    border-bottom: 2px solid var(--accent-orange);
 }
 
 .nav-divider {
@@ -104,7 +114,7 @@ body {
 }
 
 .play-btn {
-    background-color: var(--accent-gold);
+    background-color: var(--accent-orange);
     color: #fff;
     border: none;
     width: 65px;
@@ -121,7 +131,7 @@ body {
 
 .play-btn:hover {
     transform: scale(1.1);
-    background-color: #1e56bc; /* Thoda darker blue hover ke liye */
+    background-color: #c94d18; /* Thoda darker orange hover ke liye */
 }
 
 .play-text {
@@ -139,7 +149,7 @@ body {
 }
 
 .info-icon {
-    color: var(--accent-gold);
+    color: var(--accent-orange);
 }
 
 /* Proceed Button Styling */
@@ -148,22 +158,22 @@ body {
 }
 
 .proceed-btn {
-    /* Gradient matching the Blue theme */
-    background: linear-gradient(90deg, #4fa1ff 0%, #2b6cd4 100%);
+    /* Gradient matching the new Blue theme */
+    background: linear-gradient(90deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
     color: #ffffff;
     font-weight: 700;
     font-size: 1.15rem;
     padding: 16px 45px;
     border-radius: 50px;
     border: none;
-    box-shadow: 0 8px 20px rgba(43, 108, 212, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 108, 181, 0.3); /* Adjusted shadow color */
     transition: all 0.3s ease;
     letter-spacing: 0.3px;
 }
 
 .proceed-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(43, 108, 212, 0.4);
+    box-shadow: 0 12px 25px rgba(0, 108, 181, 0.5); /* Adjusted shadow color */
     color: #ffffff;
 }
 
@@ -190,7 +200,7 @@ body {
 }
 
 .legal-links a:hover {
-    color: var(--primary-dark);
+    color: var(--primary-blue);
 }
 
 .legal-links .separator {
@@ -200,7 +210,7 @@ body {
 
 /* Dark Footer Styling */
 .dark-footer {
-    background-color: var(--primary-dark);
+    background-color: var(--primary-blue);
     padding: 60px 0;
 }
 
@@ -212,12 +222,12 @@ body {
 .copyright-text {
     font-weight: 500;
     font-size: 0.95rem;
-    color: var(--bg-color); /* Lighter bluish-grey for contrast */
+    color: var(--bg-color); 
 }
 
 .disclaimer-text {
     font-size: 0.85rem;
     line-height: 1.8;
     max-width: 800px;
-    color: var(--bg-color); /* Darker bluish-grey */
+    color: var(--bg-color); 
 }
